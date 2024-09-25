@@ -1,0 +1,6 @@
+framework module Pods_Subul {
+  umbrella header "Pods-Subul-umbrella.h"
+
+  export *
+  module * { export * }
+}

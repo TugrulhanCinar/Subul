@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E54165769B3A59CBAEF21AC /* Pods_Subul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E303A1F500BC2170B009B5 /* Pods_Subul.framework */; };
 		5EB34B752CA4571600A72D20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB34B742CA4571600A72D20 /* AppDelegate.swift */; };
 		5EB34B772CA4571600A72D20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB34B762CA4571600A72D20 /* SceneDelegate.swift */; };
 		5EB34B792CA4571600A72D20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB34B782CA4571600A72D20 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BFB4FCEDBFF8683C6D449BD /* Pods-Subul.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subul.release.xcconfig"; path = "Target Support Files/Pods-Subul/Pods-Subul.release.xcconfig"; sourceTree = "<group>"; };
 		5EB34B712CA4571600A72D20 /* Subul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB34B742CA4571600A72D20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB34B762CA4571600A72D20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		5EB34B7D2CA4571700A72D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB34B802CA4571700A72D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EB34B822CA4571700A72D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E303A1F500BC2170B009B5 /* Pods_Subul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Subul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D45C03D1E2EE980DD7B29783 /* Pods-Subul.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subul.debug.xcconfig"; path = "Target Support Files/Pods-Subul/Pods-Subul.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E54165769B3A59CBAEF21AC /* Pods_Subul.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD1B4C3542AD80414ECA99D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D45C03D1E2EE980DD7B29783 /* Pods-Subul.debug.xcconfig */,
+				1BFB4FCEDBFF8683C6D449BD /* Pods-Subul.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		460DF1769FC5470DE5D16BD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74E303A1F500BC2170B009B5 /* Pods_Subul.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5EB34B682CA4571600A72D20 = {
 			isa = PBXGroup;
 			children = (
 				5EB34B732CA4571600A72D20 /* Subul */,
 				5EB34B722CA4571600A72D20 /* Products */,
+				0BD1B4C3542AD80414ECA99D /* Pods */,
+				460DF1769FC5470DE5D16BD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB34B852CA4571700A72D20 /* Build configuration list for PBXNativeTarget "Subul" */;
 			buildPhases = (
+				8445C66946B2110E0A58F650 /* [CP] Check Pods Manifest.lock */,
 				5EB34B6D2CA4571600A72D20 /* Sources */,
 				5EB34B6E2CA4571600A72D20 /* Frameworks */,
 				5EB34B6F2CA4571600A72D20 /* Resources */,
+				462E20AC0D71893479F1714B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		462E20AC0D71893479F1714B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Subul/Pods-Subul-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Subul/Pods-Subul-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Subul/Pods-Subul-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8445C66946B2110E0A58F650 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Subul-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EB34B6D2CA4571600A72D20 /* Sources */ = {
@@ -287,11 +355,13 @@
 		};
 		5EB34B862CA4571700A72D20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45C03D1E2EE980DD7B29783 /* Pods-Subul.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subul/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,11 +384,13 @@
 		};
 		5EB34B872CA4571700A72D20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BFB4FCEDBFF8683C6D449BD /* Pods-Subul.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subul/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

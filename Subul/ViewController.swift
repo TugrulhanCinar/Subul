@@ -19,7 +19,7 @@ class SubulViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addressButtonTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addressButtonTapped))
         
         mapView = MKMapView(frame: view.bounds)
         mapView.delegate = self
@@ -52,6 +52,10 @@ class SubulViewController: UIViewController {
                let startAddress = alertController.textFields?[0].text
                let endAddress = alertController.textFields?[1].text
                
+               if startAddress == nil || startAddress == "" || endAddress == nil || endAddress == "" {
+                   showErrorAlet(msg: "Address section cannot be empty")
+                   return
+               }
                if segmentedControl.selectedSegmentIndex == 0 {
                    self.selectedTransportType = .walking // Yaya
                } else {
@@ -123,7 +127,7 @@ class SubulViewController: UIViewController {
                     }
             
             let route = response.routes[0]
-            self.currentRoute = route.polyline 
+            self.currentRoute = route.polyline
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
             self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
         }
@@ -188,5 +192,17 @@ enum CustomIcon: String {
     func getImage() -> UIImage {
         
         return UIImage(named: self.rawValue)!
+    }
+}
+
+
+extension SubulViewController {
+    
+    func showErrorAlet(_ title: String? = "Error", msg: String, cancelButtonMsg: String = "Ok") {
+        
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: cancelButtonMsg, style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
